@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#126b54">
+  <title>Brunei Malay Learning</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">BELAJAR BAHASA MELAYU BRUNEI</p>
+      <h1>ブルネイ・マレー語 学習アプリ</h1>
+    </div>
+    <button id="resetBtn" class="icon-button reset-button" type="button">Reset</button>
+  </header>
+
+  <main>
+    <section id="homeView" class="view active">
+      <div class="summary">
+        <div>
+          <span class="summary-label">総合正答率</span>
+          <strong id="overallAccuracy">0%</strong>
+        </div>
+        <div>
+          <span class="summary-label">学習済み</span>
+          <strong id="studiedCount">0問</strong>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button id="reviewWrongBtn" class="secondary-button" type="button">間違えた問題の復習</button>
+      </div>
+      <div id="chapterList" class="chapter-grid"></div>
+    </section>
+
+    <section id="practiceView" class="view">
+      <nav class="practice-top">
+        <button id="backBtn" class="secondary-button" type="button">章選択</button>
+        <div>
+          <p id="chapterTitle" class="practice-kicker"></p>
+          <h2 id="questionTitle"></h2>
+        </div>
+      </nav>
+
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <article class="practice-card">
+        <div id="questionMeta" class="question-meta"></div>
+        <div id="imageArea" class="image-area hidden"></div>
+        <div id="passageArea" class="passage-area"></div>
+        <div id="questionText" class="question-text"></div>
+        <div id="sortArea" class="sort-area hidden"></div>
+        <div id="choicesArea" class="choices-area"></div>
+        <textarea id="dictationInput" class="dictation hidden" rows="4" placeholder="聞こえたマレー語を書き取る"></textarea>
+
+        <div id="audioPanel" class="audio-panel hidden">
+          <audio id="audioPlayer" controls preload="none"></audio>
+          <label>
+            速度
+            <select id="speedSelect">
+              <option value="0.5">0.5</option>
+              <option value="0.75">0.75</option>
+              <option value="1" selected>1.0</option>
+              <option value="1.25">1.25</option>
+              <option value="1.5">1.5</option>
+              <option value="1.75">1.75</option>
+              <option value="2">2.0</option>
+            </select>
+          </label>
+          <button id="replayBtn" class="secondary-button" type="button">もう一度聞く</button>
+        </div>
+
+        <div class="action-row">
+          <button id="checkBtn" class="primary-button" type="button">Jawapan</button>
+          <button id="wrongBtn" class="secondary-button" type="button">Soalan Salah</button>
+        </div>
+
+        <section id="answerPanel" class="answer-panel hidden">
+          <h3 id="resultTitle"></h3>
+          <div id="answerText"></div>
+          <div id="explanationText"></div>
+          <div id="grammarText"></div>
+          <div id="vocabText"></div>
+          <div id="modelAnswerText"></div>
+        </section>
+
+        <section id="shadowingPanel" class="training-panel hidden">
+          <h3>シャドーイング</h3>
+          <p id="shadowingText"></p>
+        </section>
+
+        <section id="recordingPanel" class="training-panel hidden">
+          <h3>録音練習</h3>
+          <button id="recordBtn" class="secondary-button" type="button">録音開始</button>
+          <p id="recordStatus">ブラウザが対応していれば録音できます。</p>
+          <audio id="recordPlayback" controls class="hidden"></audio>
+        </section>
+      </article>
+
+      <div class="nav-row">
+        <button id="prevBtn" class="secondary-button" type="button">◀ Sebelumnya</button>
+        <span id="positionText"></span>
+        <button id="nextBtn" class="primary-button" type="button">Seterusnya ▶</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/chapter01.js"></script>
+  <script src="data/chapter02.js"></script>
+  <script src="data/chapter03.js"></script>
+  <script src="data/chapter04.js"></script>
+  <script src="data/chapter05.js"></script>
+  <script src="script.js?v=11"></script>
+</body>
+</html>

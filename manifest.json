@@ -1,0 +1,10 @@
+{
+  "name": "Brunei Malay Learning",
+  "short_name": "Brunei Malay",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#126b54",
+  "description": "ブルネイ・マレー語を単語と文章で学ぶアプリ",
+  "icons": []
+}
