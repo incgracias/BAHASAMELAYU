@@ -1,18 +1,27 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#126b54">
-  <title>Brunei Malay Learning</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css?v=10">
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#126b54">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Brunei Malay">
+
+<title>Brunei Malay Learning</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon/icon-192.png">
+<link rel="stylesheet" href="style.css?v=10">
+
 </head>
 <body>
   <header class="app-header">
     <div>
       <p class="eyebrow">BELAJAR BAHASA MELAYU BRUNEI</p>
-      <h1>ブルネイ・マレー語 学習アプリ</h1>
+      <h1>ブルネイ・マレー語 学習アプリ Duolingo</h1>
     </div>
     <button id="resetBtn" class="icon-button reset-button" type="button">Reset</button>
   </header>
@@ -21,16 +30,16 @@
     <section id="homeView" class="view active">
       <div class="summary">
         <div>
-          <span class="summary-label">総合正答率</span>
+          <span class="summary-label">正解率</span>
           <strong id="overallAccuracy">0%</strong>
         </div>
         <div>
-          <span class="summary-label">学習済み</span>
+          <span class="summary-label">学習済</span>
           <strong id="studiedCount">0問</strong>
         </div>
       </div>
       <div class="toolbar">
-        <button id="reviewWrongBtn" class="secondary-button" type="button">間違えた問題の復習</button>
+        <button id="reviewWrongBtn" class="secondary-button" type="button">間違えた問題</button>
       </div>
       <div id="chapterList" class="chapter-grid"></div>
     </section>

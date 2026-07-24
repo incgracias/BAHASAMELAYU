@@ -406,20 +406,74 @@ select {
   display: none !important;
 }
 
-@media (max-width: 680px) {
-  .summary {
-    grid-template-columns: 1fr;
-  }
+@media (max-width:680px){
 
-  .practice-top {
-    grid-template-columns: 1fr;
-  }
+    .summary{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .toolbar button {
-    flex: 1 1 150px;
-  }
+    .practice-top{
+        grid-template-columns:1fr;
+    }
 
-  .chapter-card p {
-    min-height: auto;
-  }
+    .toolbar button{
+        flex:1 1 150px;
+    }
+
+    .chapter-card p{
+        min-height:auto;
+    }
+
+}
+
+
+/* ===== SECTION表示（英検3級アプリ風）===== */
+
+.chapter-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.chapter-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    min-width:0;
+    flex:1;
+}
+
+.study-mini{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:72px;
+    height:38px;
+
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+
+    font-size:.9rem;
+    font-weight:700;
+
+    flex-shrink:0;
+}
+
+.progress-text{
+    margin:10px 0 0;
+    color:#627086;
+    font-size:0.95rem;
+    font-weight:700;
+}
+
+.section-title{
+    font-size:1.15rem;
+    font-weight:800;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }

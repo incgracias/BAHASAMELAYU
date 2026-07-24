@@ -1,4 +1,4 @@
-const CACHE_NAME = "brunei-malay-app-v11";
+const CACHE_NAME = "brunei-malay-app-v12";
 const APP_FILES = [
   "./",
   "./index.html",

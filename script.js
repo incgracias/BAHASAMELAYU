@@ -133,14 +133,43 @@
       const chapterProgress = progress.chapters[chapter.id] || {};
       const done = Object.keys(chapterProgress).length;
       const percent = chapter.questions.length ? Math.round((done / chapter.questions.length) * 100) : 0;
-      return `
-        <article class="chapter-card">
-          <h2><span class="pill">Duolingo</span> ${escapeHtml(chapter.title)}</h2>
-          <div class="chapter-progress" aria-label="${percent}%"><span style="width:${percent}%"></span></div>
-          <p class="summary-label">${done}/${chapter.questions.length}問 学習済み</p>
-          <button class="primary-button" type="button" data-chapter="${chapter.id}">学習する</button>
-        </article>
-      `;
+      
+return `
+<article class="chapter-card">
+
+    <div class="chapter-top">
+
+        <div class="chapter-title">
+
+
+
+            <span class="section-title">
+                ${escapeHtml(chapter.title)}
+            </span>
+
+        </div>
+
+        <button
+            class="study-mini"
+            type="button"
+            data-chapter="${chapter.id}">
+            学習
+        </button>
+
+    </div>
+
+    <div class="chapter-progress"
+         aria-label="${percent}%">
+        <span style="width:${percent}%"></span>
+    </div>
+
+    <p class="progress-text">
+        ${done} / ${chapter.questions.length}問
+    </p>
+
+</article>
+`;
+     
     }).join("");
   }
 
